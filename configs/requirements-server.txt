@@ -1,0 +1,26 @@
+# Coherent pinned core stack, Linux x86_64 + Python 3.11, CUDA 12.8 wheels.
+# Install verl from the exact commit below. Save pip freeze after installation.
+torch==2.8.0
+vllm==0.11.0
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.10.1
+datasets==4.1.1
+ray[default]==2.48.0
+tensordict==0.10.0
+torchdata==0.11.0
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+pyarrow==21.0.0
+pandas==2.2.3
+hydra-core==1.3.2
+omegaconf==2.3.0
+codetiming==1.4.0
+dill==0.3.8
+packaging==25.0
+pybind11==3.0.1
+pylatexenc==2.10
+wandb==0.22.1
+tensorboard==2.20.0
+pytest==8.4.2
+verl @ git+https://github.com/verl-project/verl.git@f9c855f7cf04d603c9546bc01776c74806a879c1

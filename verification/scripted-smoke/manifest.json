@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "created_at": "2026-10-03T12:48:16.844065+00:00",
+  "evaluation_kind": "scripted_smoke",
+  "method": "teacher_replay",
+  "split": "train",
+  "budgets": [
+    2,
+    4
+  ],
+  "evaluation_seed": 42,
+  "python_backend": "restricted",
+  "dataset_sha256": "402800d4e8deed55042c2a7134849f1aa56d95f707cea6915f8d83bf3f2a67b9",
+  "code_sha256": "0c842ce30db37c2253dbc9c6a0ed7f00201a8ded41284d4413c4b18f5bd2fb5c",
+  "protocol_version": "tool-r1-json-v1",
+  "python": "3.12.9 | packaged by Anaconda, Inc. | (main, Feb  6 2025, 18:49:16) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scoring": {
+    "cost_weight": 0.1,
+    "cost_reference": 6
+  },
+  "limitation": "Synthetic curriculum only; no external-domain claims.",
+  "episodes": 2400,
+  "traces_sha256": "280ec6cec44692c73878085097bab331ac522b8d216c6a8f47efabfd11b0f9a7"
+}

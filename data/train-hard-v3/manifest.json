@@ -1,0 +1,74 @@
+{
+  "dataset_sha256": "366c2792487a9b279e960ddce7c9b120d19adbd4a80da46c7f5d1bf1e9970bf9",
+  "dataset_type": "hard",
+  "files": {
+    "train/corpus.jsonl": {
+      "rows": 10673,
+      "sha256": "e68e5eb44aefe36d9d390d4f3865d3f4477a1c53ae3f482d783388bf77e20e15"
+    },
+    "train/demonstrations.jsonl": {
+      "rows": 1700,
+      "sha256": "777dbe5c3f7f336a89e66352da59113ae9badd810d0311279d2292388492810d"
+    },
+    "train/samples.jsonl": {
+      "rows": 1700,
+      "sha256": "3012b46361150d388b36b3bf7a3cb1fd5ab3f85c653e05ac62a4e39cb45a0ce3"
+    }
+  },
+  "schema_version": 2,
+  "seed": 42,
+  "skip_normal_audit": true,
+  "source": "Synthetic hard tasks for GRPO training with increased tool complexity",
+  "splits": {
+    "train": {
+      "documents": 10673,
+      "samples": 1700,
+      "tasks": {
+        "chain_of_tools": 49,
+        "compose": 150,
+        "compute": 170,
+        "conditional": 150,
+        "conflict": 60,
+        "direct": 150,
+        "multi_hop_2": 150,
+        "multi_hop_3": 101,
+        "multi_hop_4": 501,
+        "multi_hop_5": 49,
+        "retrieve": 170
+      },
+      "templates": {
+        "known": 1700
+      }
+    }
+  },
+  "task_plan": {
+    "train-hard-v2": {
+      "chain_of_tools": 0.1,
+      "compose": 0.1,
+      "compute": 0.1,
+      "conditional": 0.1,
+      "conflict": 0.05,
+      "direct": 0.1,
+      "multi_hop_2": 0.1,
+      "multi_hop_3": 0.05,
+      "multi_hop_4": 0.1,
+      "multi_hop_5": 0.1,
+      "no_tool": 0.05,
+      "retrieve": 0.1
+    },
+    "train-hard-v3": {
+      "chain_of_tools": 0.029,
+      "compose": 0.088,
+      "compute": 0.1,
+      "conditional": 0.088,
+      "conflict": 0.035,
+      "direct": 0.088,
+      "multi_hop_2": 0.088,
+      "multi_hop_3": 0.059,
+      "multi_hop_4": 0.294,
+      "multi_hop_5": 0.029,
+      "no_tool": 0.0,
+      "retrieve": 0.1
+    }
+  }
+}

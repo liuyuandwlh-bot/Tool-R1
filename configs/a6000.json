@@ -1,0 +1,21 @@
+{
+  "description": "Proposed RTX A6000 48GB single-card starting point; requires server capacity validation",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "prompt_tokens": 1024,
+  "response_tokens_including_observations": 3072,
+  "context_tokens": 4096,
+  "action_tokens": 384,
+  "train_batch_size": 8,
+  "group_size": 4,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "learning_rate": 0.00001,
+  "kl_coefficient": 0.001,
+  "cost_weight": 0.1,
+  "cost_reference": 6,
+  "training_budgets": [2, 4],
+  "gpu_memory_utilization": 0.35,
+  "max_num_seqs": 8,
+  "total_steps": 500,
+  "seed": 42
+}

@@ -1,0 +1,33 @@
+{
+  "dataset_sha256": "8c69ac707187aee9dc7c25db3a5a24aa7bff11a462b612d30763dbbe1c6487e9",
+  "budgets": [
+    2,
+    4
+  ],
+  "sft_turns": 0,
+  "demonstrations_replayed": false,
+  "files": [
+    {
+      "name": "train_visible.parquet",
+      "rows": 2400,
+      "sha256": "442e55f59c5669e910fcd575ce3c899b3faf7c4194e6b1243ea0a265fb3528c7"
+    },
+    {
+      "name": "train_hidden.parquet",
+      "rows": 2400,
+      "sha256": "13f1548519bc077f9cbfc25e8c783c272128020403fcb5d513544b65a70c76ab"
+    },
+    {
+      "name": "validation_visible.parquet",
+      "rows": 800,
+      "sha256": "99288e9e3784e4ab60a92ba5cd14e91aa32a8cf974aeb5fe487d5c32225c0a36"
+    },
+    {
+      "name": "validation_hidden.parquet",
+      "rows": 800,
+      "sha256": "065ed5c56afa23212e7e9fae422dc09f69fac72687d282e87a24b43948c8885a"
+    }
+  ],
+  "source": "synthetic hard training data (demonstrations not replayed)",
+  "test_exported": false
+}

@@ -1,0 +1,448 @@
+{
+  "overall": {
+    "n": 2400,
+    "correct": 2400,
+    "accuracy": 1.0,
+    "mean_reward": 0.9833333333333333,
+    "mean_cost": 0.16666666666666666,
+    "mean_admitted_calls": 1,
+    "mean_tool_calls": 1,
+    "mean_executed_calls": 1,
+    "mean_calls_on_correct": 1,
+    "invalid_request_rate": 0.0,
+    "execution_failure_rate": 0.0,
+    "direct_episodes": 600,
+    "direct_unnecessary_tool_episode_rate": 0.0,
+    "budget_violation_episode_rate": 0.0,
+    "mean_generated_tokens": null,
+    "generated_token_coverage": 0,
+    "totals": {
+      "requests": 2400,
+      "admitted_calls": 2400,
+      "executed_calls": 2400,
+      "invalid_requests": 0,
+      "execution_failures": 0,
+      "budget_violations": 0
+    },
+    "terminal_reasons": {
+      "final": 2400
+    }
+  },
+  "per_task": {
+    "compose": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "mean_reward": 0.9666666666666667,
+      "mean_cost": 0.3333333333333333,
+      "mean_admitted_calls": 2,
+      "mean_tool_calls": 2,
+      "mean_executed_calls": 2,
+      "mean_calls_on_correct": 2,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 1200,
+        "admitted_calls": 1200,
+        "executed_calls": 1200,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 600
+      }
+    },
+    "compute": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 600,
+        "admitted_calls": 600,
+        "executed_calls": 600,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 600
+      }
+    },
+    "direct": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "mean_reward": 1.0,
+      "mean_cost": 0.0,
+      "mean_admitted_calls": 0,
+      "mean_tool_calls": 0,
+      "mean_executed_calls": 0,
+      "mean_calls_on_correct": 0,
+      "invalid_request_rate": null,
+      "execution_failure_rate": null,
+      "direct_episodes": 600,
+      "direct_unnecessary_tool_episode_rate": 0.0,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 0,
+        "admitted_calls": 0,
+        "executed_calls": 0,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 600
+      }
+    },
+    "retrieve": {
+      "n": 600,
+      "correct": 600,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 600,
+        "admitted_calls": 600,
+        "executed_calls": 600,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 600
+      }
+    }
+  },
+  "per_budget": {
+    "2": {
+      "n": 1217,
+      "correct": 1217,
+      "accuracy": 1.0,
+      "mean_reward": 0.9834018077239113,
+      "mean_cost": 0.1659819227608874,
+      "mean_admitted_calls": 0.9958915365653246,
+      "mean_tool_calls": 0.9958915365653246,
+      "mean_executed_calls": 0.9958915365653246,
+      "mean_calls_on_correct": 0.9958915365653246,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 302,
+      "direct_unnecessary_tool_episode_rate": 0.0,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 1212,
+        "admitted_calls": 1212,
+        "executed_calls": 1212,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 1217
+      }
+    },
+    "4": {
+      "n": 1183,
+      "correct": 1183,
+      "accuracy": 1.0,
+      "mean_reward": 0.9832628909551986,
+      "mean_cost": 0.16737109044801352,
+      "mean_admitted_calls": 1.0042265426880812,
+      "mean_tool_calls": 1.0042265426880812,
+      "mean_executed_calls": 1.0042265426880812,
+      "mean_calls_on_correct": 1.0042265426880812,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 298,
+      "direct_unnecessary_tool_episode_rate": 0.0,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 1188,
+        "admitted_calls": 1188,
+        "executed_calls": 1188,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 1183
+      }
+    }
+  },
+  "per_task_budget": {
+    "compose/budget=2": {
+      "n": 297,
+      "correct": 297,
+      "accuracy": 1.0,
+      "mean_reward": 0.9666666666666667,
+      "mean_cost": 0.3333333333333333,
+      "mean_admitted_calls": 2,
+      "mean_tool_calls": 2,
+      "mean_executed_calls": 2,
+      "mean_calls_on_correct": 2,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 594,
+        "admitted_calls": 594,
+        "executed_calls": 594,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 297
+      }
+    },
+    "compose/budget=4": {
+      "n": 303,
+      "correct": 303,
+      "accuracy": 1.0,
+      "mean_reward": 0.9666666666666667,
+      "mean_cost": 0.3333333333333333,
+      "mean_admitted_calls": 2,
+      "mean_tool_calls": 2,
+      "mean_executed_calls": 2,
+      "mean_calls_on_correct": 2,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 606,
+        "admitted_calls": 606,
+        "executed_calls": 606,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 303
+      }
+    },
+    "compute/budget=2": {
+      "n": 305,
+      "correct": 305,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 305,
+        "admitted_calls": 305,
+        "executed_calls": 305,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 305
+      }
+    },
+    "compute/budget=4": {
+      "n": 295,
+      "correct": 295,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 295,
+        "admitted_calls": 295,
+        "executed_calls": 295,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 295
+      }
+    },
+    "direct/budget=2": {
+      "n": 302,
+      "correct": 302,
+      "accuracy": 1.0,
+      "mean_reward": 1.0,
+      "mean_cost": 0.0,
+      "mean_admitted_calls": 0,
+      "mean_tool_calls": 0,
+      "mean_executed_calls": 0,
+      "mean_calls_on_correct": 0,
+      "invalid_request_rate": null,
+      "execution_failure_rate": null,
+      "direct_episodes": 302,
+      "direct_unnecessary_tool_episode_rate": 0.0,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 0,
+        "admitted_calls": 0,
+        "executed_calls": 0,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 302
+      }
+    },
+    "direct/budget=4": {
+      "n": 298,
+      "correct": 298,
+      "accuracy": 1.0,
+      "mean_reward": 1.0,
+      "mean_cost": 0.0,
+      "mean_admitted_calls": 0,
+      "mean_tool_calls": 0,
+      "mean_executed_calls": 0,
+      "mean_calls_on_correct": 0,
+      "invalid_request_rate": null,
+      "execution_failure_rate": null,
+      "direct_episodes": 298,
+      "direct_unnecessary_tool_episode_rate": 0.0,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 0,
+        "admitted_calls": 0,
+        "executed_calls": 0,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 298
+      }
+    },
+    "retrieve/budget=2": {
+      "n": 313,
+      "correct": 313,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 313,
+        "admitted_calls": 313,
+        "executed_calls": 313,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 313
+      }
+    },
+    "retrieve/budget=4": {
+      "n": 287,
+      "correct": 287,
+      "accuracy": 1.0,
+      "mean_reward": 0.9833333333333333,
+      "mean_cost": 0.16666666666666666,
+      "mean_admitted_calls": 1,
+      "mean_tool_calls": 1,
+      "mean_executed_calls": 1,
+      "mean_calls_on_correct": 1,
+      "invalid_request_rate": 0.0,
+      "execution_failure_rate": 0.0,
+      "direct_episodes": 0,
+      "direct_unnecessary_tool_episode_rate": null,
+      "budget_violation_episode_rate": 0.0,
+      "mean_generated_tokens": null,
+      "generated_token_coverage": 0,
+      "totals": {
+        "requests": 287,
+        "admitted_calls": 287,
+        "executed_calls": 287,
+        "invalid_requests": 0,
+        "execution_failures": 0,
+        "budget_violations": 0
+      },
+      "terminal_reasons": {
+        "final": 287
+      }
+    }
+  },
+  "evaluation_kinds": {
+    "scripted_smoke": 2400
+  },
+  "interpretation": "Scripted smoke checks validate software only. Only language_model traces measure a model. Synthetic-data results do not establish real-world task performance.",
+  "per_template_family": {}
+}

@@ -1,0 +1,33 @@
+{
+  "dataset_sha256": "849e9300fe5357945245065ca6ed5ffbc4037abe6d2e61d4afe3d8f69bf3934f",
+  "budgets": [
+    2,
+    4
+  ],
+  "sft_turns": 4920,
+  "demonstrations_replayed": true,
+  "files": [
+    {
+      "name": "train_visible.parquet",
+      "rows": 4800,
+      "sha256": "0c49ca3840742f6b521b86ac51fe9b23cbc45f7763ab4ea2fce844945ef5d63b"
+    },
+    {
+      "name": "validation_visible.parquet",
+      "rows": 800,
+      "sha256": "fac2a6ee13f83d657609b0e6cd91b41087c854c4dc5d95f5aefd27cf54b02ee2"
+    },
+    {
+      "name": "train_hidden.parquet",
+      "rows": 4800,
+      "sha256": "824791616d18b1e6ac1d98236bdbf31109a250d7bdf5b034239303f8d3824179"
+    },
+    {
+      "name": "validation_hidden.parquet",
+      "rows": 800,
+      "sha256": "7dfd402a4c825f279192699e97a6f42e36b2a13e36085c03adc169b6a9b742d7"
+    }
+  ],
+  "source": "synthetic deterministic training teacher",
+  "test_exported": false
+}

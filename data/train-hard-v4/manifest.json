@@ -1,0 +1,88 @@
+{
+  "dataset_sha256": "0308ce5db4b350db7b8019398cdc9215b294929a3a546e2358742ee1dc51cf30",
+  "dataset_type": "hard",
+  "files": {
+    "train/corpus.jsonl": {
+      "rows": 10166,
+      "sha256": "f97a238df04309e0668b4676f2f8ec5984c5f0aa32f6fbee115a65d1a078d719"
+    },
+    "train/demonstrations.jsonl": {
+      "rows": 1700,
+      "sha256": "0146f59b8e6ebc63a5e1d0520da872708130fd8cb52f11f8958d81eae0a9bb0f"
+    },
+    "train/samples.jsonl": {
+      "rows": 1700,
+      "sha256": "cc37bc38b747bd6de9af3e0d5ba9b05f1ba79c1e507854c87f7d33b2f76ce713"
+    }
+  },
+  "schema_version": 2,
+  "seed": 42,
+  "skip_normal_audit": true,
+  "source": "Synthetic hard tasks for GRPO training with increased tool complexity",
+  "splits": {
+    "train": {
+      "documents": 10166,
+      "samples": 1700,
+      "tasks": {
+        "chain_of_tools": 157,
+        "compose": 147,
+        "compute": 167,
+        "conditional": 147,
+        "conflict": 59,
+        "direct": 147,
+        "multi_hop_2": 147,
+        "multi_hop_3": 99,
+        "multi_hop_4": 335,
+        "multi_hop_5": 127,
+        "retrieve": 168
+      },
+      "templates": {
+        "known": 1700
+      }
+    }
+  },
+  "task_plan": {
+    "train-hard-v2": {
+      "chain_of_tools": 0.1,
+      "compose": 0.1,
+      "compute": 0.1,
+      "conditional": 0.1,
+      "conflict": 0.05,
+      "direct": 0.1,
+      "multi_hop_2": 0.1,
+      "multi_hop_3": 0.05,
+      "multi_hop_4": 0.1,
+      "multi_hop_5": 0.1,
+      "no_tool": 0.05,
+      "retrieve": 0.1
+    },
+    "train-hard-v3": {
+      "chain_of_tools": 0.029,
+      "compose": 0.088,
+      "compute": 0.1,
+      "conditional": 0.088,
+      "conflict": 0.035,
+      "direct": 0.088,
+      "multi_hop_2": 0.088,
+      "multi_hop_3": 0.059,
+      "multi_hop_4": 0.294,
+      "multi_hop_5": 0.029,
+      "no_tool": 0.0,
+      "retrieve": 0.1
+    },
+    "train-hard-v4": {
+      "chain_of_tools": 0.094,
+      "compose": 0.088,
+      "compute": 0.1,
+      "conditional": 0.088,
+      "conflict": 0.035,
+      "direct": 0.088,
+      "multi_hop_2": 0.088,
+      "multi_hop_3": 0.059,
+      "multi_hop_4": 0.2,
+      "multi_hop_5": 0.076,
+      "no_tool": 0.0,
+      "retrieve": 0.1
+    }
+  }
+}

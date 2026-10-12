@@ -1,0 +1,146 @@
+{
+  "dataset_sha256": "849e9300fe5357945245065ca6ed5ffbc4037abe6d2e61d4afe3d8f69bf3934f",
+  "files": {
+    "test/corpus.jsonl": {
+      "rows": 2960,
+      "sha256": "ed91ce2995b58a2c12769646164e9448424bea1fd7c59cac18e1adcf6f293678"
+    },
+    "test/samples.jsonl": {
+      "rows": 800,
+      "sha256": "9b59cf8f16aad485cdac6d4a87bb0d7201e3289c49ba73fcc43b24e2bf4161b6"
+    },
+    "train/corpus.jsonl": {
+      "rows": 5640,
+      "sha256": "0e9420aae0295a75b74abba7248827b0c7bf811bef8fad7509b4145bef6c5ec4"
+    },
+    "train/demonstrations.jsonl": {
+      "rows": 2400,
+      "sha256": "e912e0a52389b6a24e858841c6ad287bb7e1ba8ac2dd64984f5b7320048785c3"
+    },
+    "train/samples.jsonl": {
+      "rows": 2400,
+      "sha256": "c7ec2bf7297b22fa5d2dfb902b5b17db5c481c1796734d4ddceb7b0bc6df26f5"
+    },
+    "validation/corpus.jsonl": {
+      "rows": 940,
+      "sha256": "16ad0e5d3095000a31f24d506a1f0e48e82b282a3cf55cbb716de2e10844ee5d"
+    },
+    "validation/samples.jsonl": {
+      "rows": 400,
+      "sha256": "436b8243c014e6980e15e5e2b49c435ebf8f4054abffbc21b64ad25f9e1e6ed2"
+    }
+  },
+  "requested_sizes": {
+    "test": 800,
+    "train": 2400,
+    "validation": 400
+  },
+  "schema_version": 2,
+  "seed": 42,
+  "source": "Entirely synthetic; not a real-world benchmark",
+  "split_isolation": "Disjoint sample IDs, entities and documents; train-only demonstrations",
+  "splits": {
+    "test": {
+      "documents": 2960,
+      "samples": 800,
+      "tasks": {
+        "compose": 80,
+        "composed": 80,
+        "compute": 80,
+        "conditional": 80,
+        "conflict": 80,
+        "direct": 80,
+        "multi_hop_2": 80,
+        "multi_hop_3": 80,
+        "no_tool": 80,
+        "retrieve": 80
+      },
+      "templates": {
+        "heldout": 400,
+        "known": 400
+      }
+    },
+    "train": {
+      "documents": 5640,
+      "samples": 2400,
+      "tasks": {
+        "compose": 360,
+        "compute": 480,
+        "conditional": 180,
+        "conflict": 120,
+        "direct": 480,
+        "multi_hop_2": 180,
+        "no_tool": 120,
+        "retrieve": 480
+      },
+      "templates": {
+        "known": 2400
+      }
+    },
+    "validation": {
+      "documents": 940,
+      "samples": 400,
+      "tasks": {
+        "compose": 60,
+        "compute": 80,
+        "conditional": 30,
+        "conflict": 20,
+        "direct": 80,
+        "multi_hop_2": 30,
+        "no_tool": 20,
+        "retrieve": 80
+      },
+      "templates": {
+        "known": 400
+      }
+    }
+  },
+  "task_plan": {
+    "test": {
+      "compose": 0.1,
+      "composed": 0.1,
+      "compute": 0.1,
+      "conditional": 0.1,
+      "conflict": 0.1,
+      "direct": 0.1,
+      "multi_hop_2": 0.1,
+      "multi_hop_3": 0.1,
+      "no_tool": 0.1,
+      "retrieve": 0.1
+    },
+    "train": {
+      "compose": 0.15,
+      "compute": 0.2,
+      "conditional": 0.075,
+      "conflict": 0.05,
+      "direct": 0.2,
+      "multi_hop_2": 0.075,
+      "no_tool": 0.05,
+      "retrieve": 0.2
+    },
+    "validation": {
+      "compose": 0.15,
+      "compute": 0.2,
+      "conditional": 0.075,
+      "conflict": 0.05,
+      "direct": 0.2,
+      "multi_hop_2": 0.075,
+      "no_tool": 0.05,
+      "retrieve": 0.2
+    }
+  },
+  "template_rules": {
+    "generalization_claim": "Held-out wording only. New task types (multi_hop_3, composed) appear only in test to test compositional generalization, but their underlying operations reuse primitives observed at training.",
+    "heldout_indices": [
+      2
+    ],
+    "known_indices": [
+      0,
+      1
+    ],
+    "task_split": "train/validation: atomic + intermediate (no multi_hop_3, no composed). test: all task types.",
+    "test": "alternating known/heldout blocks across tasks; tiny sets may not cover both",
+    "train": "known only",
+    "validation": "known only"
+  }
+}

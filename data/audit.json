@@ -1,0 +1,113 @@
+{
+  "dataset_sha256": "849e9300fe5357945245065ca6ed5ffbc4037abe6d2e61d4afe3d8f69bf3934f",
+  "demonstration_note": "Static audit only. Replay training demonstrations through Environment before SFT.",
+  "demonstrations_replayed": false,
+  "errors": [],
+  "ok": true,
+  "source": "Entirely synthetic; no language-model performance measured",
+  "splits": {
+    "test": {
+      "documents": 2960,
+      "samples": 800,
+      "tasks": {
+        "compose": 80,
+        "composed": 80,
+        "compute": 80,
+        "conditional": 80,
+        "conflict": 80,
+        "direct": 80,
+        "multi_hop_2": 80,
+        "multi_hop_3": 80,
+        "no_tool": 80,
+        "retrieve": 80
+      },
+      "templates": {
+        "heldout": 400,
+        "known": 400
+      }
+    },
+    "train": {
+      "documents": 5640,
+      "samples": 2400,
+      "tasks": {
+        "compose": 360,
+        "compute": 480,
+        "conditional": 180,
+        "conflict": 120,
+        "direct": 480,
+        "multi_hop_2": 180,
+        "no_tool": 120,
+        "retrieve": 480
+      },
+      "templates": {
+        "known": 2400
+      }
+    },
+    "validation": {
+      "documents": 940,
+      "samples": 400,
+      "tasks": {
+        "compose": 60,
+        "compute": 80,
+        "conditional": 30,
+        "conflict": 20,
+        "direct": 80,
+        "multi_hop_2": 30,
+        "no_tool": 20,
+        "retrieve": 80
+      },
+      "templates": {
+        "known": 400
+      }
+    }
+  },
+  "task_plan": {
+    "test": {
+      "compose": 0.1,
+      "composed": 0.1,
+      "compute": 0.1,
+      "conditional": 0.1,
+      "conflict": 0.1,
+      "direct": 0.1,
+      "multi_hop_2": 0.1,
+      "multi_hop_3": 0.1,
+      "no_tool": 0.1,
+      "retrieve": 0.1
+    },
+    "train": {
+      "compose": 0.15,
+      "compute": 0.2,
+      "conditional": 0.075,
+      "conflict": 0.05,
+      "direct": 0.2,
+      "multi_hop_2": 0.075,
+      "no_tool": 0.05,
+      "retrieve": 0.2
+    },
+    "validation": {
+      "compose": 0.15,
+      "compute": 0.2,
+      "conditional": 0.075,
+      "conflict": 0.05,
+      "direct": 0.2,
+      "multi_hop_2": 0.075,
+      "no_tool": 0.05,
+      "retrieve": 0.2
+    }
+  },
+  "template_rules": {
+    "generalization_claim": "Held-out wording only. New task types (multi_hop_3, composed) appear only in test to test compositional generalization, but their underlying operations reuse primitives observed at training.",
+    "heldout_indices": [
+      2
+    ],
+    "known_indices": [
+      0,
+      1
+    ],
+    "task_split": "train/validation: atomic + intermediate (no multi_hop_3, no composed). test: all task types.",
+    "test": "alternating known/heldout blocks across tasks; tiny sets may not cover both",
+    "train": "known only",
+    "validation": "known only"
+  },
+  "warnings": []
+}

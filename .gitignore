@@ -23,16 +23,8 @@ ENV/
 .coverage
 htmlcov/
 
-# Model files and checkpoints
-outputs/sft-short/adapter/
-outputs/sft-short/merged/
-outputs/grpo-hard-v1/
-outputs/grpo-hard-v2/
-outputs/grpo-hard-v4/
-outputs/sample-grpo-trained/
-outputs/sample-sft-base/
-outputs/hard-test-1t/
-outputs/hard-test-4t/
+# All outputs are ignored (logs, models, evaluations)
+outputs/
 
 # Logs
 *.log

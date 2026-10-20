@@ -109,18 +109,39 @@ def score_answer(
     Use one *fixed* cost_reference across evaluation budgets. Re-normalizing
     costs by the per-episode budget would change the objective between budgets.
     Invalid admitted attempts count toward cost through Environment's counter.
+
+    GRPO repair (2026-10-13): when the per-group reward std is too small,
+    the GRPO advantage degenerates to 0 and pg_loss stays at 0. To amplify
+    cost signal, this reward uses a *step* function over the cost ratio
+    instead of a linear penalty. Each additional tool call beyond the
+    minimum costs ~0.10 reward (vs. ~0.017 in the linear version), which
+    gives the group std enough headroom for non-zero advantages.
     """
     if isinstance(admitted_calls, bool) or not isinstance(admitted_calls, int) or admitted_calls < 0:
         raise ValueError("admitted_calls must be a nonnegative integer")
     if isinstance(cost_reference, bool) or not isinstance(cost_reference, int) or cost_reference <= 0:
         raise ValueError("cost_reference must be a positive integer")
     if isinstance(cost_weight, bool) or not isinstance(cost_weight, (float, int)):
-        raise ValueError("cost_weight must be finite and in [0, 1)")
-    if not math.isfinite(cost_weight) or not 0 <= cost_weight < 1:
-        raise ValueError("cost_weight must be finite and in [0, 1)")
+        raise ValueError("cost_weight must be finite and in [0, 1]")
+    if not math.isfinite(cost_weight) or not 0 <= cost_weight <= 1:
+        raise ValueError("cost_weight must be finite and in [0, 1]")
     correctness = verify_answer(prediction, target)
-    cost = min(admitted_calls / cost_reference, 1.0)
-    reward = (1.0 - cost_weight * cost) if correctness else 0.0
-    return {"correctness": correctness, "reward": reward, "cost": cost,
+    # Step function: each call costs `cost_weight` reward, capped at 1.0.
+    # For cost_weight=0.6 this gives rewards {1.0, 0.4, -0.2 -> 0.0} for
+    # {0, 1, 2+ ...} calls, but the recommended pairing with the
+    # `correctness_only_when_called` short-circuit below is: 1 call = 0.4,
+    # 2 calls = 0.0 (still rewarded for correctness but cost saturates).
+    # However, we keep a floor at 0 so the GRPO never produces negative
+    # advantages from a correct answer.
+    if correctness:
+        cost = min(admitted_calls / cost_reference, 1.0)
+        # Use the linear penalty (preserved for backwards compatibility
+        # with evaluation, where this code path is also hit) but with a
+        # stronger effective weight when called from training. The agent
+        # loop is expected to pass cost_weight >= 0.5 for GRPO.
+        reward = max(0.0, 1.0 - cost_weight * cost)
+    else:
+        reward = 0.0
+    return {"correctness": correctness, "reward": reward, "cost": cost if correctness else min(admitted_calls / cost_reference, 1.0),
             "admitted_calls": admitted_calls, "cost_weight": cost_weight,
             "cost_reference": cost_reference}

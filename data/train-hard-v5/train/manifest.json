@@ -1,0 +1,25 @@
+{
+  "dataset_sha256": "84c0d7d290b04e087c30359e039b1921c0157bf0a95000b9ee92dea8a709c490",
+  "dataset_type": "hard-balanced",
+  "source": "train-hard-v4 rebalanced to amplify hard tasks and drop trivial ones",
+  "splits": {
+    "train": {
+      "documents": 10166,
+      "samples": 1885,
+      "tasks": {
+        "multi_hop_3": 198,
+        "multi_hop_4": 335,
+        "multi_hop_2": 147,
+        "retrieve": 117,
+        "direct": 73,
+        "compose": 176,
+        "conditional": 147,
+        "chain_of_tools": 314,
+        "compute": 83,
+        "multi_hop_5": 254,
+        "conflict": 41
+      }
+    }
+  },
+  "seed": 42
+}

@@ -1,0 +1,62 @@
+{
+  "dataset_sha256": "d8117e5824ab581b9ee48355afab74c9d67fa00b21a94412638d00b3ce1e7ade",
+  "dataset_type": "hard-balanced",
+  "files": {
+    "train/samples.jsonl": {
+      "rows": 1685,
+      "sha256": "d8117e5824ab581b9ee48355afab74c9d67fa00b21a94412638d00b3ce1e7ade"
+    },
+    "train/demonstrations.jsonl": {
+      "rows": 1505,
+      "sha256": "2f5beeb372c7a75b114d8826685c0b92b035f360a3c480b0ff64ff38854b0366"
+    },
+    "train/corpus.jsonl": {
+      "rows": 10166,
+      "sha256": "f97a238df04309e0668b4676f2f8ec5984c5f0aa32f6fbee115a65d1a078d719"
+    },
+    "validation/samples.jsonl": {
+      "rows": 200,
+      "sha256": "39d26d92ba10a5d0cb15d895168ddaf7ca363e6be5063e5c41e80a035698a3ec"
+    },
+    "validation/corpus.jsonl": {
+      "rows": 10166,
+      "sha256": "f97a238df04309e0668b4676f2f8ec5984c5f0aa32f6fbee115a65d1a078d719"
+    }
+  },
+  "source": "train-hard-v4 rebalanced to amplify hard tasks; val 200 from train",
+  "splits": {
+    "train": {
+      "samples": 1685,
+      "tasks": {
+        "chain_of_tools": 283,
+        "multi_hop_3": 178,
+        "compose": 159,
+        "multi_hop_4": 305,
+        "multi_hop_2": 130,
+        "multi_hop_5": 222,
+        "retrieve": 109,
+        "conflict": 34,
+        "compute": 73,
+        "conditional": 130,
+        "direct": 62
+      }
+    },
+    "validation": {
+      "samples": 200,
+      "tasks": {
+        "compose": 17,
+        "multi_hop_4": 30,
+        "multi_hop_3": 20,
+        "conditional": 17,
+        "chain_of_tools": 31,
+        "multi_hop_2": 17,
+        "multi_hop_5": 32,
+        "compute": 10,
+        "retrieve": 8,
+        "direct": 11,
+        "conflict": 7
+      }
+    }
+  },
+  "seed": 42
+}
